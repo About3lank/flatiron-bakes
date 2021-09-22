@@ -1,11 +1,14 @@
 import cakes from "./Cakes";
 import Cake from "./Cake";
 
-function CakeCard(){
+function CakeCard({flavor, price, size, image}){
     return (
-        <>
-            {cakes.map(cake => <Cake key={cake.flavor} flavor={cake.flavor} size={cake.size} price={cake.price} image={cake.image}/>)}
-        </>
+        <div className="cake">
+            <h1>{flavor} Cake</h1>
+            <p>Size: {size}</p>
+            <p>${price}</p>
+            <img src={image} alt="{`${flavor} Cake`}"/>
+        </div>
     );
 }
 export default CakeCard;
