@@ -1,13 +1,12 @@
-import cakes from "./Cakes";
-import Cake from "./Cake";
+// import cakes from "./Cakes";
+// import Cake from "./Cake"
 
-function CakeCard({flavor, price, size, image}){
+
+function CakeCard({cake, setSelectedCake}){
     return (
-        <div className="cake">
-            <h1>{flavor} Cake</h1>
-            <p>Size: {size}</p>
-            <p>${price}</p>
-            <img src={image} alt="{`${flavor} Cake`}"/>
+        <div className="cake" onClick={() => setSelectedCake(cake)}>
+            <h2>{cake.flavor} Cake</h2>
+            <p>{cake.size} cake -- ${cake.price}</p>
         </div>
     );
 }

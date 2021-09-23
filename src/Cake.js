@@ -1,11 +1,10 @@
 function Cake({flavor, size='6" inch cake', price, image}) {
     return (
-        <div className="cake">
-            <h1>{flavor} Cake</h1>
-            <p>Size: {size}</p>
-            <p>${price}</p>
-            <img src={image} alt="{`${flavor} Cake`}"/>
-        </div>
+        <h1>{cake.flavor} Cake</h1>
+        <p>Size: {cake.size}</p>
+        <p>${cake.price}</p>
+        <img src={cake.image} alt={`${cake.flavor} Cake`}/>
+
     )
 
 };
